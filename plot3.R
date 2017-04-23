@@ -11,5 +11,5 @@ BaltimoraEmissionsForYear <- aggregate(Emissions ~ year + type, BaltimoraEmissio
 
 library(ggplot2)
 png("plot3.png", height=480, width=680)
-ggplot(BaltimoraEmissionsForYear,aes(x=factor(year),y=Emissions,fill=type)) + geom_bar(stat="identity") + facet_grid(. ~ type) + xlab("year") + ylab(expression("total PM"[2.5]*" emission")) + ggtitle(expression("PM"[2.5]*paste(" emissions in Baltimore ", "City by various source types", sep="")))
+ggplot(BaltimoraEmissionsForYear,aes(x=factor(year),y=Emissions,fill=type)) + geom_bar(stat="identity") + facet_grid(. ~ type) + xlab("year") + ylab(expression("Emissions PM " [2.5])) + ggtitle(expression("PM"[2.5]*paste(" emissions in Baltimore ", "City by various source types", sep="")))
 dev.off()
